@@ -1,4 +1,4 @@
-## SDG Assignment 20 : 06 - 01 - console.log('Welcome to JavaScript')
+# SDG Assignment 20 : 06 - 01 - console.log('Welcome to JavaScript')
 
 # Let's get started
 
