@@ -7,3 +7,11 @@ console.log(
 
 const userName = window.prompt('What is your name?')
 console.log(`It's a pleasure to meet you ${userName}!`)
+
+const firstOperand = window.prompt('Please choose one random number.')
+const secondOperand = window.prompt(
+  'Please choose another single random number.'
+)
+
+parseFloat(firstOperand)
+parseFloat(secondOperand)
