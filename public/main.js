@@ -131,30 +131,50 @@ const numbers = [
   21,
 ]
 
-let smallest = 0
-for (let index = 0; index < numbers.length; index++) {
-  const smallestNumber = Math.min(...numbers)
-  smallest = smallestNumber
+let largest = 0
+for (let i = 0; i < numbers.length; i++) {
+  if (largest < numbers[i]) {
+    largest = numbers[i]
+  }
 }
+
+let smallest = null
+for (let i = 1; i < numbers.length; i++) {
+  if (smallest === null) {
+    smallest = numbers[i]
+  }
+  if (numbers[i] < smallest) {
+    smallest = numbers[i]
+  }
+}
+
+console.log(largest)
 console.log(smallest)
 
-let largest = 0
-for (let index = 0; index < numbers.length; index++) {
-  const largestNumber = Math.max(...numbers)
-  largest = largestNumber
-}
-console.log(largest)
+//LINQ method for smallest
+//const smallestNumber = Math.min(...numbers)
+//console.log(smallest)
+
+//LINQ method for largest
+//const largestNumber = Math.max(...numbers)
+//console.log(largest)
 
 let arraySum = 0
-for (let index = 0; index < numbers.length; index++) {
-  const sum = numbers.reduce((a, b) => a + b, 0)
-  arraySum = sum
+for (let i = 0; i < numbers.length; i++) {
+  arraySum += numbers[i]
 }
 console.log(arraySum)
 
+//LINQ for sum
+//const sum = numbers.reduce((a, b) => a + b, 0)
+//console.log(arraySum)
+
 let arrayAverage = 0
-for (let index = 0; index < numbers.length; index++) {
-  const average = numbers.reduce((a, b) => a + b, 0) / numbers.length
-  arrayAverage = average
+for (let i = 0; i < numbers.length; i++) {
+  arrayAverage += numbers[i]
 }
-console.log(arrayAverage)
+const average = arrayAverage / numbers.length
+console.log(average)
+
+// LINQ for average
+//const average = numbers.reduce((a, b) => a + b, 0) / numbers.length
