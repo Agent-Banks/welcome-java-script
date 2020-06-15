@@ -8,10 +8,22 @@ console.log(
 const userName = window.prompt('What is your name?')
 console.log(`It's a pleasure to meet you ${userName}!`)
 
-const firstOperand = window.prompt('Please choose one random number.')
-const secondOperand = window.prompt(
-  'Please choose another single random number.'
-)
+const firstValue = window.prompt('Please choose one random number.')
+const secondValue = window.prompt('Please choose another single random number.')
 
-parseFloat(firstOperand)
-parseFloat(secondOperand)
+const firstOperand = parseFloat(firstValue)
+const secondOperand = parseFloat(secondValue)
+
+const sum = firstOperand + secondOperand
+const difference = firstOperand - secondOperand
+const product = firstOperand * secondOperand
+const quotient = firstOperand / secondOperand
+const remainder = firstOperand % secondOperand
+
+console.log(`${firstOperand} + ${secondOperand} = ${sum}`)
+console.log(`${firstOperand} - ${secondOperand} = ${difference}`)
+console.log(`${firstOperand} * ${secondOperand} = ${product}`)
+console.log(`${firstOperand} / ${secondOperand} = ${quotient}`)
+console.log(
+  `${firstOperand} / ${secondOperand} has a remainder that = ${remainder}`
+)
